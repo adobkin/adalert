@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>ADAlertController Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">ADAlert </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Anton Dobkin</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/animation">animation</option>
+		
+		<option value="//api/name/backgroundColor">backgroundColor</option>
+		
+		<option value="//api/name/backgroundTapHandler">backgroundTapHandler</option>
+		
+		<option value="//api/name/blurStyle">blurStyle</option>
+		
+		<option value="//api/name/contentInsets">contentInsets</option>
+		
+		<option value="//api/name/disableBlurEffects">disableBlurEffects</option>
+		
+		<option value="//api/name/headerInsets">headerInsets</option>
+		
+		<option value="//api/name/headerView">headerView</option>
+		
+		<option value="//api/name/message">message</option>
+		
+		<option value="//api/name/style">style</option>
+		
+		<option value="//api/name/textFields">textFields</option>
+		
+		<option value="//api/name/textViews">textViews</option>
+		
+		<option value="//api/name/title">title</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addAction:">- addAction:</option>
+		
+		<option value="//api/name/addActions:">- addActions:</option>
+		
+		<option value="//api/name/addOtherView:">- addOtherView:</option>
+		
+		<option value="//api/name/addTextField:">- addTextField:</option>
+		
+		<option value="//api/name/addTextView:">- addTextView:</option>
+		
+		<option value="//api/name/initWithTitle:message:">- initWithTitle:message:</option>
+		
+		<option value="//api/name/initWithTitle:message:style:">- initWithTitle:message:style:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">ADAlertController Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>UIViewController</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>ADAlertController.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An instance of ADAlertController displays an alert <a href="#//api/name/message">message</a> to the user.</p>
+
+<p>The ADAlertController - a replacement for UIAlertController with block-based API. The
+ADAlertController displays an alert <a href="#//api/name/message">message</a> to the user and supports two <a href="#//api/name/style">style</a> to display:</p>
+
+<ul>
+<li>ADAlertControllerStyleAlert - By default an alert displayed modally in center of screen</li>
+<li>ADAlertControllerStyleActionSheet - By default an action sheet displayed modally on bottom of screen</li>
+</ul>
+
+
+<p>After configuring the ADAlertController present it using the presentViewController:animated:completion: method.</p>
+
+<p>In addition to displaying a <a href="#//api/name/message">message</a> to a user, you can associate user&rsquo;s actions with your alert controller to give the user
+a way to respond. Each action is instance of <a href="../Classes/ADAlertControllerAction.html">ADAlertControllerAction</a>. To add the action you should use the <a href="#//api/name/addAction:">addAction:</a>
+or <a href="#//api/name/addActions:">addActions:</a> method.</p>
+
+<p>When you configuring the ADAlertController with the ADAlertControllerStyleAlert <a href="#//api/name/style">style</a>, you can add text fields and text views.
+To add the text field you should use the <a href="#//api/name/addTextField:">addTextField:</a> method, to add the text view - <a href="#//api/name/addTextView:">addTextView:</a> method. The ADAlertController
+lets you provide a block for configuring your text fields prior to display it. The text field is instance of
+<a href="../Classes/ADAlertControllerTextField.html">ADAlertControllerTextField</a>, the text view is instance of <a href="../Classes/ADAlertControllerTextView.html">ADAlertControllerTextView</a>.</p>
+
+<p>Additionally, you can add any custom view to the alert controller if used ADAlertControllerStyleAlert <a href="#//api/name/style">style</a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Configuring" name="task_Configuring"></a>
+						<h2 class="task-title">Configuring</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="method-title"><code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The title of the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (copy, nonatomic, readwrite, nullable) NSString *title</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The title of the alert controller.</p>
+
+<p>The title string is displayed top in the alert controller. You should use this string to get the user’s
+attention and communicate the reason for displaying the alert.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/message" title="message"></a>
+	<h3 class="method-title"><code><a href="#//api/name/message">&nbsp;&nbsp;message</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The descriptive, which provides more details about the reason for the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (copy, nonatomic, readwrite, nullable) NSString *message</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The descriptive, which provides more details about the reason for the alert controller.</p>
+
+<p>The description string is displayed below the <a href="#//api/name/title">title</a> string. Use this string to provide additional context
+about the reason for the alert or about the actions that the user might take.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/style" title="style"></a>
+	<h3 class="method-title"><code><a href="#//api/name/style">&nbsp;&nbsp;style</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The style of the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic, readonly) ADAlertControllerStyle style</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The style of the alert controller.</p>
+
+<p>This value determines how the alert is displayed on screen.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/contentInsets" title="contentInsets"></a>
+	<h3 class="method-title"><code><a href="#//api/name/contentInsets">&nbsp;&nbsp;contentInsets</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The inset or outset margins for the rectangle around the content view.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic, readwrite) UIEdgeInsets contentInsets</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The inset or outset margins for the rectangle around the content view.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disableBlurEffects" title="disableBlurEffects"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disableBlurEffects">&nbsp;&nbsp;disableBlurEffects</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Flag used to disable blur effect for content view. Default value is NO.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic, readwrite) BOOL disableBlurEffects</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Flag used to disable blur effect for content view. Default value is NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/blurStyle" title="blurStyle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/blurStyle">&nbsp;&nbsp;blurStyle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Blur <a href="#//api/name/style">style</a>. Default UIBlurEffectStyleExtraLight</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic, readwrite) UIBlurEffectStyle blurStyle</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Blur <a href="#//api/name/style">style</a>. Default UIBlurEffectStyleExtraLight</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/backgroundColor" title="backgroundColor"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundColor">&nbsp;&nbsp;backgroundColor</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Background color.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readwrite, nullable) UIColor *backgroundColor</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Background color.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/backgroundTapHandler" title="backgroundTapHandler"></a>
+	<h3 class="method-title"><code><a href="#//api/name/backgroundTapHandler">&nbsp;&nbsp;backgroundTapHandler</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Block that will be called upon tapping the background.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (copy, nonatomic, readwrite, nullable) void ( ^ ) ( void ) backgroundTapHandler</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The Block that will be called upon tapping the background.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/animation" title="animation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/animation">&nbsp;&nbsp;animation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The animation wich uses to present and dismiss instance of ADAlertController.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readwrite, null_resettable) id&lt;ADAlertControllerAnimation&gt; animation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The animation wich uses to present and dismiss instance of ADAlertController.</p>
+
+<p>If is in nil value, will be used default animation. Default is nil.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initializing" name="task_Initializing"></a>
+						<h2 class="task-title">Initializing</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithTitle:message:style:" title="initWithTitle:message:style:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithTitle:message:style:">&ndash;&nbsp;initWithTitle:message:style:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a new instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithTitle:(nullable NSString *)<em>title</em> message:(nullable NSString *)<em>message</em> style:(ADAlertControllerStyle)<em>style</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The <a href="#//api/name/title">title</a> string is displayed top in the alert controller. Use this string
+        to get the user’s attention and communicate the reason for the
+        alert. Can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The description string is displayed below the <a href="#//api/name/title">title</a> string. Can be nil</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>style</code></th>
+						<td><p>Determines how the alert controller is displayed on screen.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns a new instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithTitle:message:" title="initWithTitle:message:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithTitle:message:">&ndash;&nbsp;initWithTitle:message:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a new instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithTitle:(nullable NSString *)<em>title</em> message:(nullable NSString *)<em>message</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>title</code></th>
+						<td><p>The <a href="#//api/name/title">title</a> string is displayed top in the alert controller. Use this
+string to get the user’s attention and communicate the reason for the
+alert. Can be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>message</code></th>
+						<td><p>The description string is displayed below the <a href="#//api/name/title">title</a> string. Can be nil</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Initializes and returns a new instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Actions" name="task_Actions"></a>
+						<h2 class="task-title">Actions</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addAction:" title="addAction:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAction:">&ndash;&nbsp;addAction:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an action to the alert controller</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAction:(ADAlertControllerAction *)<em>action</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>action</code></th>
+						<td><p>The action</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds an action to the alert controller</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addActions:" title="addActions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addActions:">&ndash;&nbsp;addActions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds multiple actions to the alert controller</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addActions:(NSArray&lt;ADAlertControllerAction*&gt; *)<em>actions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>actions</code></th>
+						<td><p>The Array of actions</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds multiple actions to the alert controller</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Text Fields &amp; Text Views" name="task_Text Fields &amp; Text Views"></a>
+						<h2 class="task-title">Text Fields &amp; Text Views</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/textFields" title="textFields"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textFields">&nbsp;&nbsp;textFields</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The array of text fields displayed by the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readonly, nullable) NSArray&lt;ADAlertControllerTextField*&gt; *textFields</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The array of text fields displayed by the alert controller.</p>
+
+<p>Use this property to access the text fields displayed by the alert. The text fields are in
+the order in which you added them to the alert controller.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/textViews" title="textViews"></a>
+	<h3 class="method-title"><code><a href="#//api/name/textViews">&nbsp;&nbsp;textViews</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The array of text views displayed by the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readonly, nullable) NSArray&lt;ADAlertControllerTextView*&gt; *textViews</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The array of text views displayed by the alert controller.</p>
+
+<p>Use this property to access the text views displayed by the alert. The text views are in
+the order in which you added them to the alert controller.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addTextField:" title="addTextField:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addTextField:">&ndash;&nbsp;addTextField:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a text field to the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addTextField:(nullable void ( ^ ) ( ADAlertControllerTextField *field ))<em>configurationHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>configurationHandler</code></th>
+						<td><p>A block used to configure the text field. The block takes the text field instance as a parameter,
+and can modify it properties prior to being displayed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds a text field to the alert controller.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addTextView:" title="addTextView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addTextView:">&ndash;&nbsp;addTextView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a text view to the alert controller.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addTextView:(nullable void ( ^ ) ( ADAlertControllerTextView *textView ))<em>configurationHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>configurationHandler</code></th>
+						<td><p>A block used to configure the text view. The block takes the text view instance as a parameter,
+and can modify it properties prior to being displayed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Adds a text view to the alert controller.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Custom Views" name="task_Custom Views"></a>
+						<h2 class="task-title">Custom Views</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/headerView" title="headerView"></a>
+	<h3 class="method-title"><code><a href="#//api/name/headerView">&nbsp;&nbsp;headerView</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The custom header view that is displayed above the content.
+Default is nil.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readwrite) UIView *headerView</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The custom header view that is displayed above the content.
+Default is nil.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/headerInsets" title="headerInsets"></a>
+	<h3 class="method-title"><code><a href="#//api/name/headerInsets">&nbsp;&nbsp;headerInsets</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The inset or outset margins for the rectangle around the header view.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (assign, nonatomic, readwrite) UIEdgeInsets headerInsets</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The inset or outset margins for the rectangle around the header view.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ADAlertController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addOtherView:" title="addOtherView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addOtherView:">&ndash;&nbsp;addOtherView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)addOtherView:(UIView *)<em>view</em></code></div>
+
+		    
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 Anton Dobkin. All rights reserved. Updated: 2015-11-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
