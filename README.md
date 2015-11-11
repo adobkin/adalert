@@ -1,5 +1,7 @@
 # ADAlertController
 
+[![Join the chat at https://gitter.im/adobkin/adalert](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/adobkin/adalert?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![iOS 8.0+](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]()
 [![Xcode 7.0+](http://img.shields.io/badge/Xcode-7.0%2B-blue.svg)]()
 [![Release](https://img.shields.io/github/release/adobkin/ADAlert.svg)](/releases)
