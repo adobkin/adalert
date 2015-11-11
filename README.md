@@ -1,5 +1,12 @@
 # ADAlertController
 
+[![iOS 8.0+](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]()
+[![Xcode 7.0+](http://img.shields.io/badge/Xcode-7.0%2B-blue.svg)]()
+[![Release](https://img.shields.io/github/release/adobkin/ADAlert.svg)](/releases)
+[![License](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
+
+[![Twitter](https://img.shields.io/badge/Twitter-@adobkin-55ACEE.svg)](http://twitter.com/adobkin)
+
 ![](screens/screens.png)
 
 ## Synopsis
@@ -99,8 +106,8 @@ alert.backgroundTapHandler = ^{
 };
 
 // Actions
-[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Send" 
-                                       style:ADAlertControllerActionStyleDefault 
+[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Send"
+                                       style:ADAlertControllerActionStyleDefault
                                      handler:^(ADAlertControllerAction *action) {
     ADAlertControllerTextField *emailTextField = weakAlert.textFields[0];
     ADAlertControllerTextView *messageTextView = weakAlert.textViews[0];
@@ -110,8 +117,8 @@ alert.backgroundTapHandler = ^{
     }
 }]];
 
-[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Cancel" 
-                                      style:ADAlertControllerActionStyleCancel 
+[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Cancel"
+                                      style:ADAlertControllerActionStyleCancel
                                     handler:^(ADAlertControllerAction *action) {
     [weakAlert dismissViewControllerAnimated:YES completion:nil];
 }]];
