@@ -99,7 +99,9 @@ alert.backgroundTapHandler = ^{
 };
 
 // Actions
-[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Send" style:ADAlertControllerActionStyleDefault handler:^(ADAlertControllerAction *action) {
+[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Send" 
+                                       style:ADAlertControllerActionStyleDefault 
+                                     handler:^(ADAlertControllerAction *action) {
     ADAlertControllerTextField *emailTextField = weakAlert.textFields[0];
     ADAlertControllerTextView *messageTextView = weakAlert.textViews[0];
     if([emailTextField isValidText] && [messageTextView isValidText]) {
@@ -108,7 +110,9 @@ alert.backgroundTapHandler = ^{
     }
 }]];
 
-[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Cancel" style:ADAlertControllerActionStyleCancel handler:^(ADAlertControllerAction *action) {
+[alert addAction:[[ADAlertControllerAction alloc] initWithTitle:@"Cancel" 
+                                      style:ADAlertControllerActionStyleCancel 
+                                    handler:^(ADAlertControllerAction *action) {
     [weakAlert dismissViewControllerAnimated:YES completion:nil];
 }]];
 
