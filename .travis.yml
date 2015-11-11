@@ -1,0 +1,16 @@
+language: objective-c
+osx_image: xcode7.0
+
+env:
+  matrix:
+    - DESTINATION="OS=8.1,name=iPhone 4s"
+    - DESTINATION="OS=8.2,name=iPhone 5"
+    - DESTINATION="OS=8.3,name=iPhone 5s"
+    - DESTINATION="OS=8.4,name=iPhone 6"
+    - DESTINATION="OS=9.0,name=iPhone 6 Plus"
+    - DESTINATION="OS=9.1,name=iPhone 6s"
+    - DESTINATION="OS=9.1,name=iPhone 6s Plus"    
+
+script: 
+  - cd ADAlert 
+  - xcodebuild -project ADAlert.xcodeproj -scheme "ADAlert-Universal" -sdk iphonesimulator -configuration Release -destination "$DESTINATION"
