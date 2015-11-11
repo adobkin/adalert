@@ -13,4 +13,4 @@ env:
 
 script: 
   - cd ADAlert 
-  - xcodebuild -project ADAlert.xcodeproj -scheme "ADAlert-Universal" -sdk iphonesimulator -configuration Release -destination "$DESTINATION"
+  - xcodebuild -project ADAlert.xcodeproj -scheme "ADAlert-Universal" -sdk iphonesimulator -destination "$DESTINATION"
