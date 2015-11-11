@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/github/release/adobkin/ADAlert.svg)](/releases)
 [![License](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
 
-[![Twitter](https://img.shields.io/badge/Twitter-@adobkin-55ACEE.svg)](http://twitter.com/adobkin)
+[![Twitter](https://img.shields.io/badge/Twitter-@a_dobkin-55ACEE.svg)](http://twitter.com/a_dobkin)
 
 ![](screens/screens.png)
 
