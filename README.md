@@ -1,13 +1,27 @@
 # ADAlertController
 
+ADAlertController - `UIAlertController` replacement with block-based API.
+
 [![iOS 8.0+](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]()
 [![Xcode 7.0+](http://img.shields.io/badge/Xcode-7.0%2B-blue.svg)]()
-[![Release](https://img.shields.io/github/release/adobkin/ADAlert.svg)](/releases)
-[![License](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
-
-[![Twitter](https://img.shields.io/badge/Twitter-@a_dobkin-55ACEE.svg)](http://twitter.com/a_dobkin)
+[![Release](https://img.shields.io/github/release/adobkin/ADAlert.svg)](https://github.com/adobkin/adalert/releases)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-blue.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![License](http://img.shields.io/badge/License-MIT-green.svg)](/LICENSE)
 
 ![](screens/screens.png)
+
+* [Synopsis](#synopsis)
+* [Details](#details)
+  * [Text Fields and Text Views](#text-fields-and-text-views)
+    * [Validating entered text](#validating-entered-text)
+  * [Actions](#actions)
+* [Usage](#usage)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+    * [Dynamic framework](#dynamic-framework)
+    * [Carthage](#carthage)
+  * [Examples](#examples)
+* [License](#license)
 
 ## Synopsis
 
@@ -26,6 +40,9 @@ With `ADAlertControllerStyleAlert` you will be able to:
 
  * Add text fields and text views. Add validators for each text field and text view.
  * Add any custom content view to an alert controller and/or a custom header view.
+
+After configuring the ADAlertController present it using the presentViewController:animated:completion: method.
+
 
 ## Details
 
@@ -85,8 +102,27 @@ Actions are added to an instance of `ADAlertControllerAction` using either `addA
 
 ### Installation
 
-1. Download the latest release and unzip it.
-2. Go to your Xcode project’s "General" settings. Drag unzipped ADAlert.framework to the "Embedded Binaries" section.
+#### Dynamic framework
+
+ 1. Download the latest release and unzip it.
+ 2. Go to your Xcode project’s "General" settings.
+ 3. Drag unzipped ADAlert.framework to the "Embedded Binaries" section.
+
+#### Carthage
+
+1. Install Carthage: https://github.com/Carthage/Carthage#installing-carthage
+2. Add github "adobkin/ADAlert" to your Cartfile.
+3. Run `carthage update`.
+4. Drag unzipped ADAlert.framework from the Carthage/Build/iOS/ directory to the "Embedded Binaries" section.
+5. On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script with the following contents:
+
+  `/usr/local/bin/carthage copy-frameworks`
+
+  and add the paths to the frameworks you want to use under "Input Files", e.g.:
+
+  ``$(SRCROOT)/Carthage/Build/iOS/ADAlert.framework`
+
+  This script works around an App Store submission bug triggered by universal binaries.
 
 ### Examples
 
